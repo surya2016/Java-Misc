@@ -11,6 +11,17 @@ import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
 
 public class Utility {
+	
+	/**
+     * Utility method to return random array of Integers in a range of 0 to range
+     */
+    public static int[] getRandomArray(int length, int numRange){
+        int[] randoms = new int[length];
+        for(int i=0; i<length; i++){
+            randoms[i] = (int) (Math.random()*numRange);
+        }
+		return randoms;
+    }
 
 	public List<String[]> readCSV(String filename) throws IOException
 	{
