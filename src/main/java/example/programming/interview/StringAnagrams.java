@@ -36,6 +36,11 @@ public class StringAnagrams {
 	 * This method assumes that both word and anagram are not null and lowercase 
 	 * @return true, if both Strings are anagram. */ 
 	public static boolean iAnagram(String word, String anagram){ 
+		
+		if(word.length() != anagram.length())
+		{ 
+			return false; 
+		} 		
 		char[] charFromWord = word.toCharArray(); 
 		char[] charFromAnagram = anagram.toCharArray(); 
 		Arrays.sort(charFromWord); 
