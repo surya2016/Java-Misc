@@ -9,7 +9,7 @@ public class PropertiesLoader {
 	
 	
 	
-	public static Properties getProperty(String config) throws IOException
+	/*public static Properties getProperty(String config) throws IOException
 	{
 		FileInputStream file;
 		Properties prop = new Properties();
@@ -22,7 +22,7 @@ public class PropertiesLoader {
 		
 		return prop;
 	}
-	
+	*/
 	
 	public static Properties initLoad(String env) {
 		FileInputStream file;
