@@ -48,7 +48,7 @@ public static int[] sol(int[] A,int K)
 		 * therefore, 12%5 =2 .... we will get same array on 12th and 2nd rotation ( 10th rotation will give same array as original)
 		 */
 	}
-	
+	//result = 76389
 	return result;
 	
 }

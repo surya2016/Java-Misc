@@ -66,7 +66,31 @@ public class StringAnagrams {
 		return sbSecond.length()==0 ? true : false; 
 	}
 
-	
+	/**
+	 * Test cases:
+	 * 1. Anagram Strings: Listen, silent 
+	 * 2. Reed, deer
+	 * 3. Random strings: test,rest
+	 * 5. different string length
+	 * 6. Passing first string as null string
+- passing second string as null string
+- passing both strings as null string
+- passing two different strings (non anagrams)
+- passing two anagram strings, one with upper case
+- passing two anagram strings containing integers
+- passing two strings composed of whitespace only
+ Test with strings containing a space in between
+- passing two correct anagram strings
+- passing two correct anagram non english strings
+Test with non dictionary words
+ Test with super long strings
+ Test with one char strings
+ Test with hyphenated words
+ Repeatedly call the function 1000 times
+  Call the method in a a multi threaded environment
+  Test with alpha-numeric strings
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
