@@ -2,6 +2,7 @@ package example.programming.interview;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Map.Entry;
 
 public class MostFrequentlyOccuringItem {
@@ -95,7 +97,7 @@ public class MostFrequentlyOccuringItem {
 		BufferedReader br = null;
 		
 		try {
-			fis = new FileInputStream("/home/suryakhanna/test.txt");
+		/*	fis = new FileInputStream("/home/suryakhanna/test.txt");
 			
 			dis = new DataInputStream(fis);
 			
@@ -111,7 +113,22 @@ public class MostFrequentlyOccuringItem {
 			{
 				words.addAll(Arrays.asList(line.toLowerCase().split("[\\s]+")));  //O(1)
 			}
+			*/
+			
+			File file = new File("/home/suryakhanna/test.txt");
+			
+			Scanner sc = new Scanner(file); // default delimiter is whitespace
 				
+			List<String> words = new ArrayList<String>();
+			HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
+			
+			while(sc.hasNextLine())
+			{
+				//System.out.println(sc.nextLine());
+				words.addAll(Arrays.asList(sc.nextLine().toLowerCase().split("[\\s]+")));  //O(1)
+			}
+				
+			sc.close();
 			
 			for(String word : words)
 			{
@@ -165,6 +182,7 @@ public class MostFrequentlyOccuringItem {
 		
 		MaxDuplicateWordCountFromFile();
 
+		
 	}
 
 }

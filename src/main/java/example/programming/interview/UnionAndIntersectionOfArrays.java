@@ -34,6 +34,8 @@ public class UnionAndIntersectionOfArrays {
 		
 	}
 	
+	//use set for finding common elements
+	
 	
 	//O(n) where m>n - for already sorted arrays
 	public void printUnion(int [] A, int [] B)

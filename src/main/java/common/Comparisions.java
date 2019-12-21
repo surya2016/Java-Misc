@@ -1,5 +1,6 @@
-package bqmig.apollo;
+package common;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -36,5 +37,30 @@ public class Comparisions {
 				System.out.println("Entry missing in dataMap2 for key"+data1.getKey());
 			}
 		}
+	}
+	
+	
+	public Map<String,String>  compareMaps(Map<String,String> dataMap1, Map<String,String> dataMap2)
+	{
+		Map<String,String> errData = new HashMap<String, String>();
+			
+		
+		for(Entry<String,String> data1:dataMap1.entrySet())
+		{
+			
+			if(dataMap2.containsKey(data1.getKey()))
+			{
+				if(!dataMap2.get(data1.getKey()).equalsIgnoreCase(data1.getValue()))
+				{
+					errData.put(data1.getKey(), "Values-->\ndata1 ="+data1.getValue()+"\ndata2="+dataMap2.get(data1.getKey()).toString());
+				}
+			}
+			else
+				errData.put(data1.getKey(), "Values-->\ndata1 ="+data1.getValue()+"\ndata2=No corresponding data found");
+			
+			
+		}
+		
+		return errData;
 	}
 }
